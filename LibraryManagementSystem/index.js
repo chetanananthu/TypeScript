@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var LibraryService_1 = require("./Service/LibraryService");
+var Book_1 = require("./entity/Book");
+var Author_1 = require("./entity/Author");
+var Member_1 = require("./entity/Member");
+var service = new LibraryService_1.LibraryService();
+var book = new Book_1.Book(1, "The Great Gatsby", "F. Scott Fitzgerald");
+var author = new Author_1.Author(1, "F. Scott Fitzgerald", ["The Great Gatsby"]);
+var member = new Member_1.Member(1, "John Doe", "jhon@gmail.com", new Date('2023-01-01'));
+service.addBook(book);
+service.addAuthor(author);
+service.addMember(member);
+service.diplay();
